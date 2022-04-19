@@ -1,2 +1,2 @@
-# Android---Kotlin
+# Android-Kotlin
 Building an Expenses Tracker
