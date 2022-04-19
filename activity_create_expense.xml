@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpenseDetail">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Create New Expense"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EdtText_CrtExpName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Expenses Name"
+        android:inputType="textPersonName"
+        android:paddingStart="30dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/EdtTxt_CrtExpAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="@string/_00_00"
+        android:inputType="numberDecimal"
+        android:paddingEnd="30dp"
+        android:textAlignment="textEnd"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/EdtText_CrtExpName"
+        app:layout_constraintStart_toStartOf="@+id/EdtText_CrtExpName"
+        app:layout_constraintTop_toBottomOf="@+id/EdtText_CrtExpName" />
+
+    <CheckBox
+        android:id="@+id/ChckBoxRegular"
+        android:layout_width="42dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="16dp"
+        android:checked="false"
+        app:layout_constraintBottom_toTopOf="@+id/BtnCreate"
+        app:layout_constraintEnd_toEndOf="@+id/EdtTxt_CrtExpAmount"
+        app:layout_constraintTop_toBottomOf="@+id/EdtTxt_CrtExpAmount"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="44dp"
+        android:text="Status Regular:(if regular Click)"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/BtnCreate"
+        app:layout_constraintEnd_toStartOf="@+id/ChckBoxRegular"
+        app:layout_constraintStart_toStartOf="@+id/EdtTxt_ExpAmount"
+        app:layout_constraintTop_toBottomOf="@+id/EdtTxt_ExpAmount"
+        app:layout_constraintVertical_bias="0.47000003" />
+
+    <Button
+        android:id="@+id/BtnCreate"
+        android:layout_width="362dp"
+        android:layout_height="44dp"
+        android:text="CREATE"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/EdtTxt_CrtExpAmount"
+        app:layout_constraintStart_toStartOf="@+id/EdtTxt_CrtExpAmount"
+        app:layout_constraintTop_toBottomOf="@+id/EdtTxt_CrtExpAmount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
